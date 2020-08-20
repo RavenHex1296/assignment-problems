@@ -17,7 +17,7 @@ def convert_to_numbers(input_string):
 
 print(convert_to_numbers("a cat"))
 print("Testing convert_to_numbers for input 'a cat'")
-assert convert_to_numbers("a caz") == [1, 0, 3, 1, 20], "Wrong conversion"
+assert convert_to_numbers("a cat") == [1, 0, 3, 1, 20], "Wrong conversion"
 print("PASSED")
 
 
