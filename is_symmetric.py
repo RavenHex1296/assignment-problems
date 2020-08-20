@@ -1,9 +1,9 @@
 def is_symmetric(input_string):
     reverse_string = input_string[::-1]
-        if reverse_string == input_string:
-          return True
-        else:
-          return False
+    if reverse_string == input_string:
+        return True
+    else:
+        return False
 
 print("Checking if racecar is a palindrome.")
 print(is_symmetric("racecar"))
