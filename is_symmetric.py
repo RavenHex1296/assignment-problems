@@ -8,11 +8,11 @@ def is_symmetric(input_string):
 print("Checking if racecar is a palindrome.")
 print(is_symmetric("racecar"))
 print("Testing is_symmetric on input 'racecar'")
-assert is_symmetric("racecar") == True, "Racecar is a palindrome"
+assert is_symmetric("racecar") == True, "Racecar is a palindrome. The code should show true."
 print("PASSED")
 
 print("Checking if batman is a palindrome.") 
 print(is_symmetric("batman"))
 print("Testing is_symmetric on input 'batman'")
-assert is_symmetric("batman") == False, "Batman is not a palindrome."
+assert is_symmetric("batman") == False, "Batman is not a palindrome. The code should show false."
 print("PASSED")
