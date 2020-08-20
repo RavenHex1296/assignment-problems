@@ -1,6 +1,9 @@
-letters = ['a', 'b', 'c', 'd', 'e',
-           'f', 'g', 'h', 'i', 'j',
-           ...]
+letters = [' ', 'a', 'b', 'c', 'd',
+           'e', 'f', 'g', 'h', 'i',
+           'j', 'k', 'l', 'm', 'n',
+           'o', 'p', 'q', 'r', 's',
+           't', 'u', 'v', 'w', 'x',
+           'y', 'z']
 
 
 def convert_to_numbers(input_string):
@@ -14,7 +17,7 @@ def convert_to_numbers(input_string):
 
 print(convert_to_numbers("a cat"))
 print("Testing convert_to_numbers for input 'a cat'")
-assert convert_to_numbers("a cat") == [1, 0, 3, 1, 20], "Wrong conversion"
+assert convert_to_numbers("a caz") == [1, 0, 3, 1, 20], "Wrong conversion"
 print("PASSED")
 
 
