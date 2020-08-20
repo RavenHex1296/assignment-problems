@@ -23,8 +23,7 @@ def convert_to_letters(input_string):
 
     return converted_numbers
 
-final_conversion_to_letters = convert_to_letters([1, 0, 3, 1, 20])
-print(a)
+print(convert_to_letters([1, 0, 3, 1, 20]))
 print("Testing convert_to_letters for input [1, 0, 3, 1, 20]")
 assert convert_to_letters([1, 0, 3, 1, 20]) == "a cat", "Wrong conversion"
 print("PASSED")
