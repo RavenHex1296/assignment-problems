@@ -7,10 +7,9 @@ letters = [' ', 'a', 'b', 'c', 'd',
 
 
 def convert_to_numbers(input_string):
-    input_numbers = list(input_string)
     converted_letters = []
 
-    for letter in input_numbers:
+    for letter in input_string:
         converted_letters.append(letters.index(letter))
 
     return converted_letters
