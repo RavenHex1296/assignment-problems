@@ -14,6 +14,7 @@ def convert_to_numbers(input_string):
 
     return converted_letters
 
+print("Converting from letters to numbers")
 print(convert_to_numbers("a cat"))
 print("Testing convert_to_numbers for input 'a cat'")
 assert convert_to_numbers("a cat") == [1, 0, 3, 1, 20], "Wrong conversion"
@@ -27,6 +28,7 @@ def convert_to_letters(input_string):
 
     return converted_numbers
 
+print("Converting from numbers to letters")
 print(convert_to_letters([1, 0, 3, 1, 20]))
 print("Testing convert_to_letters for input [1, 0, 3, 1, 20]")
 assert convert_to_letters([1, 0, 3, 1, 20]) == "a cat", "Wrong conversion"
