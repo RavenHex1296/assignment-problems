@@ -1,6 +1,7 @@
 def first_n_terms(n):
     assert n > 0, "Input must be positive"
     sequence = []
+    
     for element in range(1, n):
         if element == 1:
             preceding_term = 5
