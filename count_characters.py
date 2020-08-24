@@ -7,8 +7,6 @@ def count_characters(input_string):
 
     return final_dictionary
 
-print(count_characters('A cat!!!'))
-
 print("Asserting count_characters works on input 'A cat!!!'")
 assert count_characters("A cat"), "Code is busted"
 print("PASSED")
