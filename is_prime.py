@@ -1,7 +1,7 @@
 def is_prime(n):
     assert n > 1, "Input too small"
-    for divisor in range(2, n):
-        if (n % divisor) == 0:
+    for m in range(2, n):
+        if (n % m) == 0:
             return False
     return True
 
