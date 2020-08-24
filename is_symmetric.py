@@ -1,6 +1,5 @@
 def is_symmetric(input_string):
-    reverse_string = input_string[::-1]
-    if reverse_string == input_string:
+    if input_string[::-1] == input_string:
         return True
     else:
         return False
