@@ -14,7 +14,7 @@ class Stack:
 s = Stack()
 
 print("Asserting s.data")
-assert s.data == []
+assert s.data == [], "Incorrect output"
 print('PASSED')
 
 s.push('a')
@@ -22,19 +22,19 @@ s.push('b')
 s.push('c')
 
 print("Asserting s.push")
-assert s.data == ['a', 'b', 'c']
+assert s.data == ['a', 'b', 'c'], "Incorrect output"
 print('PASSED')
 
 s.pop()
 
 print("Asserting s.pop")
-assert s.data == ['a', 'b']
+assert s.data == ['a', 'b'], "Incorrect output"
 print('PASSED')
 
 print("Asserting s.peek")
-assert s.peek() == 'b'
+assert s.peek() == 'b', "Incorrect output"
 print('PASSED')
 
 print("testing s.data...")
-assert s.data == ['a', 'b']
+assert s.data == ['a', 'b'], "Incorrect output"
 print('PASSED')
