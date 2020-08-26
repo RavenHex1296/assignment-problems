@@ -1,6 +1,6 @@
 def count_characters(input_string):
     final_dictionary = {}
-    lowercase = list(input_string.lower())
+    lowercase = input_string.lower()
 
     for character in lowercase:
         final_dictionary[character] = lowercase.count(character)
