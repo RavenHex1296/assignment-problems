@@ -13,8 +13,7 @@ def first_n_terms(n):
     return sequence
 
 print("Asserting first_n_terms on input 10")
-assert first_n_terms(10) == [5, 11, 29, 83, 245, 731,
-                             2189, 6563, 19685, 59051], "Incorrect output"
+assert first_n_terms(10) == [5, 11, 29, 83, 245, 731, 2189, 6563, 19685, 59051], "Incorrect output"
 print("PASSED")
 
 
