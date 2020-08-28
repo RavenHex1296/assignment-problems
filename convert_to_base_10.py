@@ -10,3 +10,7 @@ def convert_to_base_10(input_binary_number):
         return decimal
 
 print(convert_to_base_10(10011))
+
+print("Testing convert_to_base_10 on input '10011'")
+assert convert_to_base_10(10011) == 19, "Incorrect output"
+print("PASSED")
