@@ -6,7 +6,7 @@ class Stack:
         self.data.append(new_data)
 
     def pop(self):
-        self.data.remove(self.data[len(self.data)-1])
+       self.data[:-1]
 
     def peek(self):
         return self.data[len(self.data)-1]
