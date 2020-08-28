@@ -1,13 +1,13 @@
 
 def make_nested(input_dict):
-    final_dict = {}
+    nested_dict = {}
 
     for key in input_dict:
         splitter = key.split("_")
-        if splitter[0] not in final_dict:
-            final_dict[splitter[0]] = {}
-        final_dict[splitter[0]][splitter[1]] = input_dict.get(key)
-    return final_dict
+        if splitter[0] not in nested_dict:
+            nested_dict[splitter[0]] = {}
+        nested_dict[splitter[0]][splitter[1]] = input_dict.get(key)
+    return nested_dict
 
 colors = {
   'animal_bumblebee': ['yellow', 'black'],
