@@ -13,6 +13,8 @@ def decode(numbers, a, b):
     decoded_string = ""
     for element in numbers:
         decoded_string += letters[int((element - b) / a)]
+        if ((element - b) / a).is_integer() == False or int((element - b) / a) < 0 or letters[int((element - b) / a)] == "z":
+            return False
     return decoded_string
 
 
@@ -22,4 +24,12 @@ print("PASSED")
 
 print("Asserting decode is operational on input ([5, 3, 9, 5, 43], 2, 3)")
 assert decode([5, 3, 9, 5, 43], 2, 3) == "a cat", "Decoded incorrectly"
+print("PASSED")
+
+print("Asserting decode is operational on input ([1, 3, 9, 5, 43], 2, 3)")
+assert not decode([1, 3, 9, 5, 43], 2, 3), "Decoded incorrectly"
+print("PASSED")
+
+print("Asseting decode is operational on input ([5, 3, 9, 5, 44], 2, 3)")
+assert not decode([5, 3, 9, 5, 44], 2, 3), "Decoded incorrectly"
 print("PASSED")
