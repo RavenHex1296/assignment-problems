@@ -14,6 +14,6 @@ def convert_to_base_2(base_1_input):
 
     return string
 
-print("Asserting convert_to_base_2 on input '19'")
+print("Asserting convert_to_base_2 is operational on input '19'")
 assert convert_to_base_2(19) == "10011", "Incorrect conversion"
 print("PASSED")

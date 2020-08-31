@@ -20,7 +20,7 @@ colors = {
 
 print(flatten(colors))
 
-print("Asserting flatten on input 'colors'")
+print("Asserting flatten is operational on input 'colors'")
 assert flatten(colors) == {
   'animal_bumblebee': ['yellow', 'black'],
   'animal_elephant': ['gray'],
