@@ -15,7 +15,10 @@ def decode(numbers, a, b):
 
     for element in numbers:
         decoded_string += letters[int((element - b) / a)]
-        if ((element - b) / a).is_integer() == False or int((element - b) / a) < 0 or int((element - b) / a) > 25:
+        inverse_output = (element - b) / a
+        not_integer = not( inverse_output.is_integer() )
+        
+        if not_integer or inverse_output < 0 or inverse_output > 25:
             return False
 
     return decoded_string
