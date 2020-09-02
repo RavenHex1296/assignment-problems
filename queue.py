@@ -6,7 +6,7 @@ class Queue:
         self.data.append(item)
 
     def dequeue(self):
-        return self.data.pop([0])
+        return self.data.popleft()
     
     def peek(self):
         return self.data[0]
@@ -24,4 +24,6 @@ q.dequeue()
 print(q.data)
 
 q.peek()
+print(q.peek())
+
 print(q.data)
