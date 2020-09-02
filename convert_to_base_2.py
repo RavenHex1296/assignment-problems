@@ -12,8 +12,8 @@ def convert_to_base_2(base_1_input):
     for string_index in range(index - 1, -1, -1):
         base_2_string += str(binary_number[string_index])
 
-    return base_2_string
+    return int(base_2_string)
 
 print("Asserting convert_to_base_2 is operational on input '19'")
-assert convert_to_base_2(19) == "10011", "Incorrect conversion"
+assert convert_to_base_2(19) == 10011, "Incorrect conversion"
 print("PASSED")
