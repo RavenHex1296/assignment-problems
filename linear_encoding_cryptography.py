@@ -52,4 +52,4 @@ for a in range(1, 101):
         except:
             pass
 
-# Encoded_list was encoded using a = 34 and b = 71 or a = 34 and b = 37.
+# The two valid encoding variables are a = 34 and b = 71 or a = 34 and b = 37.
