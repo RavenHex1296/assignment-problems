@@ -35,5 +35,5 @@ assert q.peek() == "b", "Incorrect output"
 print("PASSED")
 
 print("Asserting q.data")
-assert q.data == ["b", "c"]
+assert q.data == ["b", "c"], "Incorrect output"
 print("PASSED")
