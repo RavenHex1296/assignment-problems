@@ -1,7 +1,7 @@
 def update_bounds(bounds):
     midpoint = (bounds[0] + bounds[1]) / 2
 
-    if midpoint *0* 2 > 2:
+    if midpoint ** 2 > 2:
         bounds[1] = midpoint
 
     if midpoint ** 2 < 2:

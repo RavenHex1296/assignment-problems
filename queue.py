@@ -7,7 +7,7 @@ class Queue:
 
     def dequeue(self):
         return self.data.pop(0)
-    
+
     def peek(self):
         return self.data[0]
 
