@@ -4,7 +4,7 @@ def update_bounds(bounds):
     if midpoint ** 2 > 2:
         bounds[1] = midpoint
 
-    if midpoint ** 2 < 2:
+    elif midpoint ** 2 < 2:
         bounds[0] = midpoint
 
     return bounds
