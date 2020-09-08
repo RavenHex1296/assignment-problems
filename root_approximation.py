@@ -13,7 +13,7 @@ def update_bounds(bounds):
 def estimate_root(precision):
     bounds = [1, 2]
 
-    while bounds[1] - bounds[0] > precision:
+    while bounds[1] - bounds[0] >= precision:
             update_bounds(bounds)
 
     return (bounds[0] + bounds[1]) / 2
