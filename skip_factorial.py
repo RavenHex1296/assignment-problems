@@ -1,17 +1,14 @@
 def skip_factorial_nonrecursive(n):
     product = 1
-    for element in range(n, 0, -2):
-        product *= i
+    for element in range(n, 1, -2):
+        product *= element
 
     return product
 
 
 def skip_factorial_recursive(n):
-    if n <= 2:
-        if n % 2 == 0:
-            return 2
-        else:
-            return 1
+    if n <= 1:
+        return 1
 
     return n * skip_factorial_recursive(n-2)
 
