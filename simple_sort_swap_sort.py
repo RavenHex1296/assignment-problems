@@ -21,9 +21,9 @@ def swap_sort(num_list):
 
     for element in range(0, len(num_list)):
         if element + 1 < len(num_list) and num_list[element] > num_list[element + 1]:
-            temp = num_list[element + 1]
+            holding_num = num_list[element + 1]
             num_list[element + 1] = num_list[element]
-            num_list[element] = temp
+            num_list[element] = holding_num
             swap_count += 1
 
     if swap_count == 0:
