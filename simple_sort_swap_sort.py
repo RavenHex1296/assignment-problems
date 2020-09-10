@@ -17,17 +17,19 @@ def simple_sort(num_list):
 
 
 def swap_sort(num_list):
-    while min(num_list) != num_list[0]:
+    swap_count = 0
 
-        for element in range(0, len(num_list) - 1):
-            preceding_element = num_list[element]
-            next_element = num_list[element + 1]
+    for element in range(0, len(num_list)):
+        if element + 1 < len(num_list) and num_list[element] > num_list[element +1 ]:
+            temp = num_list[element + 1]
+            num_list[element + 1] = num_list[element]
+            num_list[element] = temp
+            swap_count += 1
 
-            if preceding_element > next_element:
-                num_list[element] = next_element
-                num_list[element + 1] = preceding_element
+    if swap_count == 0:
+        return num_list 
 
-    return num_list
+    return swap_sort(num_list)
 
 
 print("Asserting simple_sort on input [5, 8, 2, 2, 4, 3, 0, 2, -5, 3.14, 2]")
