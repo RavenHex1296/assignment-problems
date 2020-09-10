@@ -20,14 +20,14 @@ def swap_sort(num_list):
     swap_count = 0
 
     for element in range(0, len(num_list)):
-        if element + 1 < len(num_list) and num_list[element] > num_list[element +1 ]:
+        if element + 1 < len(num_list) and num_list[element] > num_list[element + 1]:
             temp = num_list[element + 1]
             num_list[element + 1] = num_list[element]
             num_list[element] = temp
             swap_count += 1
 
     if swap_count == 0:
-        return num_list 
+        return num_list
 
     return swap_sort(num_list)
 
