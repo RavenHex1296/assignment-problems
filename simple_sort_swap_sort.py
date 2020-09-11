@@ -31,7 +31,6 @@ def swap_sort(num_list):
 
     return swap_sort(num_list)
 
-
 print("Asserting simple_sort on input [5, 8, 2, 2, 4, 3, 0, 2, -5, 3.14, 2]")
 assert simple_sort([5, 8, 2, 2, 4, 3, 0, 2, -5, 3.14, 2]) == [-5, 0, 2, 2, 2, 2, 3, 3.14, 4, 5, 8]
 print("PASSED")

@@ -1,0 +1,8 @@
+Free Response:
+a. For a list of n elements, the least number of swaps that could occur is 0. Same thing for a list of 5 elements because there would be no swaps. There are two cases in which there are zero swaps. The first case is that the elements of the list are already in order from least to greatest. The other is that all elements are the same.
+
+b. The greatest number of swaps that could occur in a list of n elements would happen when the list is ordered from greatest to least. In the case of a list of 5 elements, the greatest number of swaps would be 10 (which is 4 + 3 + 2 + 1). In the case of a list of n elements, the greatest number of swaps would be (n - 1) + (n - 2) + ... + 1.
+
+c. True. By getting the greatest number close to the end of the list, there is a decrease in the amount of pairs that require swapping.
+
+d. False. The input list [5, 8, 2, 2, 4, 3, 0] is a counterexample of the statement. 
