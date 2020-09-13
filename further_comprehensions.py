@@ -1,5 +1,5 @@
 def identity_matrix_elements(n):
-    return [[1 if j == i else 0 for j in range(n)] for i in range(n)]
+    return [[1 if i == j else 0 for j in range(n)] for i in range(n)]
 
 
 def counting_across_rows_matrix_elements(m, n):
