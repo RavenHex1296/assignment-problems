@@ -29,9 +29,7 @@ def most_iterations():
 
     return number_with_most_iterations
 
-print("Asserting collatz_iterations on input 13")
-assert collatz_iterations(13) == 9, "Incorrect output"
-print("PASSED")
+print(collatz_iterations(13))
 
 print(str(most_iterations()) + " has the highest number of Collatz iterations")
 
