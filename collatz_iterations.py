@@ -18,20 +18,20 @@ def collatz_iterations(number):
     return iterations.index(1)
 
 
-def max_iterations():
-    largest_num = collatz_iterations(1)
+def most_iterations():
+    highest_number_of_iterations = collatz_iterations(1)
 
     for num in range(1, 1001):
-            if collatz_iterations(num) > largest_num:
-                largest_num = collatz_iterations(num)
+            if collatz_iterations(num) > highest_number_of_iterations:
+                highest_number_of_iterations = collatz_iterations(num)
 
-    return largest_num
+    return highest_number_of_iterations
 
 print("Asserting collatz_iterations on input 13")
 assert collatz_iterations(13) == 9, "Incorrect output"
 print("PASSED")
 
-print(str(max_iterations()) + " has the highest number of Collatz iterations")
+print(str(most_iterations()) + " has the highest number of Collatz iterations")
 
 plt.style.use('bmh')
 x_coords = range(1, 1001)
