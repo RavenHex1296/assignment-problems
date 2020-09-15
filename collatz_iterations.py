@@ -19,13 +19,13 @@ def collatz_iterations(number):
 
 
 def max_iterations():
-    max_num = collatz_iterations(1)
+    largest_num = collatz_iterations(1)
 
     for num in range(1, 1001):
-            if collatz_iterations(num) > max_num:
-                max_num = collatz_iterations(num)
+            if collatz_iterations(num) > largest_num:
+                largest_num = collatz_iterations(num)
 
-    return max_num
+    return largest_num
 
 print("Asserting collatz_iterations on input 13")
 assert collatz_iterations(13) == 9, "Incorrect output"
