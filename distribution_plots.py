@@ -20,14 +20,17 @@ def probability(num_heads, num_flips):
 
 def monte_carlo_probability(num_heads, num_flips):
     favored_outcomes = 0
+
     for time in range(1000):
         heads = 0
+
         for flip in range(num_flips):
             heads += round(random())
+
         if heads == num_heads:
             favored_outcomes += 1
 
-    return favored_outcomes/1000
+    return favored_outcomes / 1000
 
 
 x_coords = [n for n in range(9)]
