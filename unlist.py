@@ -31,7 +31,7 @@ def unlist_recursive(x):
 
 
 print("Asserting unlist_nonrecursive on input [[[[1], [2,3], 4]]]")
-assert unlist_nonrecursive([[[[1], [2,3], 4]]]) == [[1], [2,3], 4], "Incorrect output"
+assert unlist_nonrecursive([[[[1], [2, 3], 4]]]) == [[1], [2, 3], 4], "Incorrect output"
 print("PASSED")
 
 print("Asserting unlist_nonrecursive on input [[[[1]]]]")
@@ -39,7 +39,7 @@ assert unlist_nonrecursive([[[[1]]]]) == 1, "Incorrect output"
 print("PASSED")
 
 print("Asserting unlist_recursive on input [[[[1], [2,3], 4]]]")
-assert unlist_recursive([[[[1], [2,3], 4]]]) == [[1], [2,3], 4], "Incorrect output"
+assert unlist_recursive([[[[1], [2, 3], 4]]]) == [[1], [2, 3], 4], "Incorrect output"
 print("PASSED")
 
 print("Asserting unlist_recursive on input [[[[1]]]]")
