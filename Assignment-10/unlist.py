@@ -16,18 +16,11 @@ def unlist_nonrecursive(x):
 
 
 def unlist_recursive(x):
-    try:
-        for element in x:
-            if list(element) != element:
-                return x
-        return unlist_recursive(element)
+    if type(x) != list or len(x) > 1:
+        return x
 
-    except:
-        if len(x) == 1:
-            return x[0]
-
-        else:
-            return x
+    else:
+        return unlist_nonrecursive(x[0])
 
 
 print("Asserting unlist_nonrecursive on input [[[[1], [2,3], 4]]]")

@@ -1,15 +1,4 @@
-def unlist_nonrecursive(x):
-    y = []
-    for element in range(0, len(x) - 1):
-        if str(x[element + 2]) == "[":
-            y.append(list(str(x)[1:-1]))
+def less_than_4_letters(string):
 
-        elif str(x[element + 2]) != "[":
-            break
-
-
-        return y
-
-
-      
-print(unlist_nonrecursive([[[[1], [2,3], 4]]]))
+    return [word for word in string.split(' ') if len(word) < 4]
+print(less_than_4_letters("Hi FFFFFFF"))
