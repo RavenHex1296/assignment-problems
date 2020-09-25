@@ -1,4 +1,4 @@
-def less_than_4_letters(string):
+def main_diagonol_and_below(n):
+    return [[1 if i == j or i == j + 1 else 0 for j in range(n)] for i in range(n)]
 
-    return [word for word in string.split(' ') if len(word) < 4]
-print(less_than_4_letters("Hi FFFFFFF"))
+print(main_diagonol_and_below(4))

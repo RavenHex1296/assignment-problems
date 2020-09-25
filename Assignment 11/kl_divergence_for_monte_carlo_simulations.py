@@ -48,12 +48,12 @@ q = [0.1, 0.8, 0.1, 0]
 
 print("Asserting kl_divergence on inputs [0.2, 0.5, 0, 0.3] and [0.1, 0.8, 0.1, 0]")
 assert kl_divergence(p, q) == -0.09637237851, "Incorrect output"
-print('PASSED')
+print("PASSED")
 
 
 q = [probability(i, 8) for i in range(9)]
 
-print('Computing KL Divergence for MC Simulations...')
+print("Computing KL Divergence for MC Simulations...")
 
 p = [monte_carlo_probability(i, 8, 100) for i in range(9)]
 print("100 samples --> KL Divergence =" + str(kl_divergence(p, q)))
