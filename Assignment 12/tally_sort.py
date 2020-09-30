@@ -1,4 +1,4 @@
-def min_value(num_list):
+def min(num_list):
     minimum = num_list[0]
 
     for n in num_list:
@@ -8,7 +8,7 @@ def min_value(num_list):
     return minimum
 
 
-def max_value(num_list):
+def max(num_list):
     maximum = num_list[0]
 
     for n in num_list:
@@ -19,14 +19,14 @@ def max_value(num_list):
 
 
 def tally_sort(num_list):
-    minimum = min_value(num_list)
+    minimum = min(num_list)
     tallys = []
     sorted_list = []
 
     for n in range(len(num_list)):
         num_list[n] -= minimum
 
-    for n in range(max_value(num_list) + 1):
+    for n in range(max(num_list) + 1):
         tallys.append(0)
 
     for num in num_list:
