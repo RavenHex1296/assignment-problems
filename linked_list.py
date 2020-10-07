@@ -42,26 +42,26 @@ print("Asserting 'data' for class 'Node'")
 assert A.data == 4, "Incorrect output"
 print("PASSED")
 
-print("Asserting 'next' for class 'Node'")
+print("Asserting method 'next' for class 'Node'")
 assert A.next == None, "Incorrect output"
 print("PASSED")
 
 B = Node(8)
 A.next = B
 
-print("Asserting methold 'next' for class 'Node'")
+print("Asserting 'next' for class 'Node'")
 assert A.next.data == 8, "Incorrect output"
 print("PASSED")
 
 linked_list = LinkedList(4)
 
-print("Asserting method 'data' for class 'LinkedList'")
+print("Asserting 'data' for class 'LinkedList'")
 assert linked_list.head.data == 4, "Incorrect output"
 print("PASSED")
 
 linked_list.append(8)
 
-print("Asserting method 'next' for class 'LinkedList'")
+print("Asserting 'append' for class 'LinkedList'")
 assert linked_list.head.next.data == 8, "Incorrect output"
 print("PASSED")
 
