@@ -34,7 +34,6 @@ def tally_sort(num_list):
 
     for n in range(len(tallys)):
         for element in range(tallys[n]):
-
             sorted_list.append(n)
 
     for n in range(len(sorted_list)):

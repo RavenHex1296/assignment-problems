@@ -43,6 +43,7 @@ plt.plot(x_coords, [monte_carlo_probability(n, 8) for n in x_coords], linewidth=
 plt.plot(x_coords, [monte_carlo_probability(n, 8) for n in x_coords], linewidth=0.75)
 plt.plot(x_coords, [monte_carlo_probability(n, 8) for n in x_coords], linewidth=0.75)
 plt.plot(x_coords, [monte_carlo_probability(n, 8) for n in x_coords], linewidth=0.75)
+
 plt.legend(['True', 'MC 1', 'MC 2', 'MC 3', 'MC 4', 'MC 5'])
 plt.xlabel('Number of Heads')
 plt.ylabel('Probability')

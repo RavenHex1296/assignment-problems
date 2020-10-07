@@ -7,7 +7,8 @@ def insert_element_into_sorted_list(element, sorted_list):
 
 
 def card_sort(num_list):
-    sorted_list = [num_list[0]]
+    sorted_list = []
+    sorted_list.append(num_list[0])
 
     for num in range(1, len(num_list)):
         sorted_list = insert_element_into_sorted_list(num_list[num], sorted_list)

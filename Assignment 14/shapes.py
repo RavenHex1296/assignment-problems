@@ -41,7 +41,7 @@ class Triangle(Shape):
     def __init__(self, base, height, color):
         super().__init__(base, height, color)
         self.perimeter = base + height + (base ** 2 + height ** 2) ** 0.5
-        self.area = base * height/2
+        self.area = base * height / 2
         self.vertices = [(0, 0), (base, 0), (0, height)]
 
 
