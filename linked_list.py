@@ -35,9 +35,25 @@ class LinkedList:
 
         current_node.next = Node(new_data, None)
 
+    def push(self, new_data):
+        new_node = Node(new_data) 
 
+        new_node.next = self.head 
+
+        self.head = new_node 
+
+    def index(self,item):
+        current = self.head
+
+        while current != None:
+            if current.data == item:
+                return current.position
+
+            else:
+                current = current.next
+
+''''
 A = Node(4)
-
 print("Asserting 'data' for class 'Node'")
 assert A.data == 4, "Incorrect output"
 print("PASSED")
@@ -72,4 +88,14 @@ linked_list.print_data()
 
 print("Asserting method 'length' for class 'LinkedList'")
 assert linked_list.length() == 3, "Incorrect output"
+print("PASSED")
+'''
+
+linked_list = LinkedList('b')
+linked_list.append('e')
+linked_list.append('f')
+linked_list.push('a')
+
+print("Asserting 'length' method for LinkedList")
+assert linked_list.length() == 4, "Incorrect output"
 print("PASSED")
