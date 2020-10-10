@@ -90,7 +90,6 @@ print("Asserting method 'length' for class 'LinkedList'")
 assert linked_list.length() == 3, "Incorrect output"
 print("PASSED")
 '''
-
 linked_list = LinkedList('b')
 linked_list.append('e')
 linked_list.append('f')
@@ -99,3 +98,9 @@ linked_list.push('a')
 print("Asserting 'length' method for LinkedList")
 assert linked_list.length() == 4, "Incorrect output"
 print("PASSED")
+
+''''
+print("Asserting method 'index' for LinkedList")
+assert linked_list.head.index == 0, "Incorrect output"
+print("PASSED")
+'''
