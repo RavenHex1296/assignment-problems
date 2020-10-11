@@ -41,8 +41,8 @@ flips = {
 }
 
 
-probability = [probability(n, 4) for n in range(5)]
-flip_outcomes = {}
+probabilities = [probability(n, 4) for n in range(5)]
+
 
 def heads_probability(num_heads, coin_list):
     num_succesful_results = 0
@@ -60,15 +60,37 @@ def heads_probability(num_heads, coin_list):
     return num_succesful_results/len(coin_list)
 
 
-for person in flips:
-    flip_outcomes[person] = []
+for key in flips:
+    head_count_list = [0, 0, 0, 0, 0]
+    values = flips[key]
+    values = list(values.split(" "))
+    for trial in values:
+        head_counter = 0
+        for flip in trial:
+            if flip == "H":
+                head_counter += 1
+        head_count_list[head_counter] += 1
+    for i in range(len(head_count_list)):
+        head_count_list[i] /= 20
+    flips[key] = head_count_list
 
-    for n in range(5):
-        flip_outcomes[person].append(heads_probability(n, flips[person]))
+ordered_list = []
 
-for person in flip_outcomes:
-    print(person + ":")
-    print(kl_divergence(probability, flip_outcomes[person]))
+while True:
+    for key in flips:
+        smallest_divergence = kl_divergence(flips[key], probabilities)
+        smallest_key = key
 
+    for key in flips:
+        if kl_divergence(flips[key], probabilities) < smallest_divergence:
+            smallest_divergence = kl_divergence(flips[key], probabilities)
+            smallest_key = key
 
-#Maia's coin flips were the best approximation of truly random coin flips
+    ordered_list.append(smallest_key + ": " + str(smallest_divergence))
+
+    del flips[smallest_key]
+
+    if len(flips) == 0:
+        print("From the best approximation of truly random flips to the worst")
+        print(ordered_list)
+        break

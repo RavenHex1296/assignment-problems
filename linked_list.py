@@ -42,7 +42,7 @@ class LinkedList:
 
         self.head = new_node 
 
-    def index(self,item):
+    def index(self, item):
         current = self.head
 
         while current != None:
