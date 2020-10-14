@@ -2,6 +2,7 @@ class Node:
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
+        self.index = 0
 
 
 class LinkedList:
@@ -29,18 +30,24 @@ class LinkedList:
 
     def append(self, new_data):
         current_node = self.head
+        index = 0
 
         while current_node.next != None:
             current_node = current_node.next
+            index += 1
 
         current_node.next = Node(new_data, None)
+        current_node.next.index = index + 1
 
     def push(self, new_data):
-        new_node = Node(new_data) 
+        former_head = self.head
+        self.head = Node(new_data, None)
 
-        new_node.next = self.head 
+        while former_head.next != None:
+            self.append(former_head.data)
+            former_head = former_head.next
 
-        self.head = new_node 
+        self.append(former_head.data)
 
     def index(self, item):
         current = self.head
@@ -51,6 +58,14 @@ class LinkedList:
 
             else:
                 current = current.next
+
+    def get_node(self, index):
+        current = self.head
+
+        for i in range(index):
+            current = current.next
+
+        return current.data
 
 ''''
 A = Node(4)
@@ -99,8 +114,35 @@ print("Asserting 'length' method for LinkedList")
 assert linked_list.length() == 4, "Incorrect output"
 print("PASSED")
 
-''''
+
 print("Asserting method 'index' for LinkedList")
 assert linked_list.head.index == 0, "Incorrect output"
 print("PASSED")
-'''
+
+print("Asserting method 'index' for LinkedList")
+assert linked_list.head.next.index == 1, "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'index' for LinkedList")
+assert linked_list.head.next.next.index == 2, "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'index' for LinkedList")
+assert linked_list.head.next.next.next.index == 3, "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'get_node'")
+assert linked_list.get_node(0) == 'a', "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'get_node'")
+assert linked_list.get_node(1) == 'b', "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'get_node'")
+assert linked_list.get_node(2) == 'e', "Incorrect output"
+print("PASSED")
+
+print("Asserting method 'get_node'")
+assert linked_list.get_node(3) == 'f', "Incorrect output"
+print("PASSED")

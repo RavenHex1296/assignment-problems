@@ -42,39 +42,26 @@ flips = {
 
 
 probabilities = [probability(n, 4) for n in range(5)]
-
-
-def heads_probability(num_heads, coin_list):
-    num_succesful_results = 0
-
-    for coindata in coin_list:
-        heads = 0
-        for element in coindata:
-
-            if element == 'H':
-                heads += 1
-
-        if heads == num_heads:
-            num_succesful_results += 1
-
-    return num_succesful_results/len(coin_list)
-
+ordered_list = []
 
 for key in flips:
-    head_count_list = [0, 0, 0, 0, 0]
+    head_count = [0, 0, 0, 0, 0]
     values = flips[key]
     values = list(values.split(" "))
+
     for trial in values:
-        head_counter = 0
+        num_heads = 0
+
         for flip in trial:
             if flip == "H":
-                head_counter += 1
-        head_count_list[head_counter] += 1
-    for i in range(len(head_count_list)):
-        head_count_list[i] /= 20
-    flips[key] = head_count_list
+                num_heads += 1
 
-ordered_list = []
+        head_count[num_heads] += 1
+
+    for n in range(len(head_count)):
+        head_count[n] /= 20
+
+    flips[key] = head_count
 
 while True:
     for key in flips:
