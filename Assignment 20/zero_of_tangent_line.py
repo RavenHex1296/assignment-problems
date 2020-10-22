@@ -15,9 +15,9 @@ def zero_of_tangent_line(f, c, delta):
     return round(x_intercept, 6)
 
 
-def estimate_solution(f, init_guess, delta, precision):
-    estimate = zero_of_tangent_line(f, init_guess, delta)
-    previous_guess = zero_of_tangent_line(f, init_guess, delta) + precision
+def estimate_solution(f, initial_guess, delta, precision):
+    estimate = zero_of_tangent_line(f, initial_guess, delta)
+    previous_guess = zero_of_tangent_line(f, initial_guess, delta) + precision
 
     while abs(estimate - previous_guess) >= precision:
         previous_guess = estimate

@@ -1,26 +1,22 @@
-def zero_of_tangent_line(c):
-    f_of_c = c ** 3 + c - 1
-    m = 3 * c ** 2 + 1
-    b = f_of_c - (c * m)
-    x_intercept = (-1 * b) / m
+import math
 
-    return round(x_intercept, 6)
+def gradient_descent(f, x0, alpha, delta, iterations):
+    guess = x0
+    for i in range(iterations):
+        derivative = ((f(guess + 0.5 * delta) - f(guess - 0.5 * delta)) / delta)
+        guess -= alpha * derivative
+    return round(f(guess), 6)
 
+print("Testing that 'gradient_descent' works...")
+def f(x):
+    return x**2 + 2*x + 1
 
-def estimate_solution(init_guess, precision):
-    estimate = zero_of_tangent_line(init_guess)
-    previous_guess = zero_of_tangent_line(init_guess) + precision
-
-    while abs(estimate - previous_guess) >= precision:
-        previous_guess = estimate
-        estimate = zero_of_tangent_line(estimate)
-
-    return estimate
-
-print("Asseting zero_of_tangent_line on input 0.5")
-assert zero_of_tangent_line(0.5) == 0.714286
-print("PASSED")
-
-print("Asseting estimate_solution on input 0.5, 0.01")
-assert estimate_solution(0.5, 0.01) == 0.682328
+assert gradient_descent(f, 0, 0.01, 0.0001, 10000) == 0
+print(" ")
+def f(x):
+    return (x**2 + math.cos(x)) / math.exp(math.sin(x))
+print("Minimum value of the graph of (x^2 + cos(x))/e^sin(x)):")
+print(gradient_descent(f, 0, 0.01, 0.0001, 10000))
+# this matches with the actual graph of the function
+print(" ")
 print("PASSED")
