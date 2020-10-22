@@ -5,6 +5,10 @@ def f(x):
     return x ** 2 + 2 * x + 1
 
 
+def g(x):
+    return (x**2 + math.cos(x)) / math.exp(math.sin(x))
+
+
 def gradient_descent(f, x0, alpha, delta, iterations=1000):
     guess = x0
 
@@ -14,8 +18,7 @@ def gradient_descent(f, x0, alpha, delta, iterations=1000):
 
     return round(f(guess), 6)
 
-print("Estimated minimum value for x^2+2x+1: " + str(gradient_descent(f, 0, 0.01, 0.0001, 10000)))
-def f(x):
-    return (x**2 + math.cos(x)) / math.exp(math.sin(x))
 
-print("Estimated minimum value for (x^2+cos(x))/(e^sin(x)): " + str(gradient_descent(f, 0, 0.01, 0.0001, 10000)))
+print("Estimated minimum value for x^2+2x+1: " + str(gradient_descent(f, 0, 0.01, 0.0001, 10000)))
+
+print("Estimated minimum value for (x^2+cos(x))/(e^sin(x)): " + str(gradient_descent(g, 0, 0.01, 0.0001, 10000)))
