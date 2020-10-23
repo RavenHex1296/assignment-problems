@@ -9,14 +9,14 @@ def f2(x):
     return (x ** 2 + math.cos(x)) / math.exp(math.sin(x))
 
 
-def gradient_descent(f, x0, alpha, delta, iterations=1000):
-    guess = x0
+def gradient_descent(f, x0, alpha, delta, iterations):
+    updated_guess = x0
 
     for n in range(iterations):
-        derivative = ((f(guess + 0.5 * delta) - f(guess - 0.5 * delta)) / delta)
-        guess -= alpha * derivative
+        derivative = ((f(updated_guess + 0.5 * delta) - f(updated_guess - 0.5 * delta)) / delta)
+        updated_guess -= alpha * derivative
 
-    return round(f(guess), 6)
+    return f(updated_guess)
 
 
 print("Estimated minimum value for x^2+2x+1: " + str(gradient_descent(f, 0, 0.01, 0.0001, 10000)))
