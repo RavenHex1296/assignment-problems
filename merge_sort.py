@@ -21,12 +21,15 @@ def merge_sort(input_list):
     if len(input_list) < 2:
         return input_list
 
-    middle = len(input_list)/2
-    left = merge_sort(input_list[:int(middle)])
-    right = merge_sort(input_list[int(middle):])
+    left = input_list[:round(len(input_list)/2)]
+    right = input_list[round(len(input_list)/2):]
+    sorted_first_half = merge_sort(left)
+    sorted_last_half = merge_sort(right)
+    return merge(sorted_first_half, sorted_last_half)
 
-    return merge(left, right)
 
 print("Asserting merge_sort")
 assert merge_sort([4, 8, 7, 7, 4, 2, 3, 1]) == [1, 2, 3, 4, 4, 7, 7, 8], "Incorrect output"
 print("PASSED")
+
+print(merge_sort([2, 1]))
