@@ -16,7 +16,7 @@ def gradient_descent(f, initial_point, alpha, delta, iterations):
         x_guess -= alpha * partial_dx
         y_guess -= alpha * partial_dy
 
-    return round(f(x_guess, y_guess), 6)
+    return round(f(x_guess, y_guess), 2)
 
 
 #Part a: Minimum value is 1 for 1 + x ** 2 + y ** 2
