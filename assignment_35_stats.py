@@ -18,6 +18,6 @@ sum = 0
 for n in range(25, 1000001):
     sum += function(n)
 
-    if sum * 1443199.7832 <= 0.95:
-        print("k value needed to have P(<=k) = 0.95 is " + str(n))
+    if sum * 1443199.7832 >= 0.95:
+        print("k value needed to have P(K<=k) = 0.95 is " + str(n))
         break
