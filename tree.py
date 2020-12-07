@@ -24,32 +24,32 @@ def get_root(tree):
             return list(branch[0])
 
 
-tree = [('a', 'c'), ('e', 'g'), ('e', 'i'), ('e', 'a'), ('d', 'b'), ('a', 'd'), ('d', 'f'), ('f', 'h'), ('d', 'j'), ('d', 'k')]
+edges = [('a', 'c'), ('e', 'g'), ('e', 'i'), ('e', 'a'), ('d', 'b'), ('a', 'd'), ('d', 'f'), ('f', 'h'), ('d', 'j'), ('d', 'k')]
 
 print("Asserting get_children on inpute 'e'")
-assert get_children('e', tree) == ['g', 'i', 'a'], "Incorrect output"
+assert get_children('e', edges) == ['g', 'i', 'a'], "Incorrect output"
 print("PASSED")
 
 print("Asserting get_children on inpute 'c'")
-assert get_children('c', tree) == [], "Incorrect output"
+assert get_children('c', edges) == [], "Incorrect output"
 print("PASSED")
 
 print("Asserting get_children on inpute 'f'")
-assert get_children('f', tree) == ['h'], "Incorrect output"
+assert get_children('f', edges) == ['h'], "Incorrect output"
 print('PASSED')
 
 print("Asserting get_parents on inpute 'e'")
-assert get_parents('e', tree) == [], "Incorrect output"
+assert get_parents('e', edges) == [], "Incorrect output"
 print("PASSED")
 
 print("Asserting get_parents on inpute 'c'")
-assert get_parents('c', tree) == ['a'], "Incorrect output"
+assert get_parents('c', edges) == ['a'], "Incorrect output"
 print("PASSED")
 
 print("Asserting get_parents on inpute 'f'")
-assert get_parents('f', tree) == ['d'], "Incorrect output"
+assert get_parents('f', edges) == ['d'], "Incorrect output"
 print('PASSED')
 
 print("Asserting get_root")
-assert get_root(tree) == ['e'], "Incorrect output"
+assert get_root(edges) == ['e'], "Incorrect output"
 print('PASSED')
