@@ -17,3 +17,5 @@ def convert_to_base_2(base_10_input):
 print("Asserting convert_to_base_2 is operational on input '19'")
 assert convert_to_base_2(19) == 10011, "Incorrect conversion"
 print("PASSED")
+
+print(convert_to_base_2(25))
