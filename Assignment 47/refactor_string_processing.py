@@ -10,7 +10,7 @@ for string in strings:
     if len(string) > 0:
         for element in string:
             if element[0]=='"' and element[-1]=='"':
-                new_string.append(element[1:])
+                new_string.append(element[1:-1])
 
             elif '.' in element:
                 new_string.append(float(element))
