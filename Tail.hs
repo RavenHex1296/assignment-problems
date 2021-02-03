@@ -8,6 +8,6 @@ reverseList :: [a] -> [a]
 reverseList  [] = []  
 reverseList  (x:xs) = reverseList xs ++ [x]  
 
-tail' n xs = reverseList (take' n (reverseList xs))
+tail' n = reverseList . take' n . reverseList
 
 main = print (tail' 4 [8,3,-1,2,-5,7])
