@@ -19,17 +19,18 @@ def find(array, key):
     bucket_index  = hash_function(key)
     for element in array[bucket_index]:
         if element[0] == key:
-            return element[0]
+            return element[1]
 
-print(array)
-array = [[], [], [], [], []]
+print("Asserting hash_function, insert, and find")
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    value = [i, i**2, i**3]
+    insert(array, key, value)
 
-insert(array, 'a', [0,1])
-insert(array, 'b', 'abcd')
-insert(array, 'c', 3.14)
-print(array)
-
-insert(array, 'd', 0)
-insert(array, 'e', 0)
-insert(array, 'f', 0)
-print(array)
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    output_value = find(array, key)
+    desired_value = [i, i**2, i**3]
+    assert output_value == desired_value
+print("PASSED")
