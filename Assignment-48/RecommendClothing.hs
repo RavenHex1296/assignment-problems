@@ -1,4 +1,4 @@
-recommendClothing :: (RealFloat a) => a -> String  
+recommendClothing :: (RealFloat a) => a -> a -> String  
 recommendClothing degreesCelsius  
     | degreesFahrenheit  >= 80 = "Wear a shortsleeve shirt"
     | degreesFahrenheit  > 65 = "Wear a longsleeve shirt"
